@@ -1,37 +1,48 @@
 import React, { FC } from "react";
-import { Provider as ProviderV3, View } from "@adobe/react-spectrum";
+import { Provider as ProviderV3 } from "@adobe/react-spectrum";
 
 import "./App.css";
 
 const App: FC = () => {
+    const commonStyle: React.CSSProperties = {
+        padding: "50px",
+        textAlign: "center",
+        backgroundColor: "#fff",
+        borderRadius: "8px",
+        boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
+        margin: "20px auto",
+    };
+
     return (
         <ProviderV3>
             {/* First Stage: Name and Bio */}
-            <View id="first-stage">
-                <h1 className="app-title">Welcome to Luigi's CV</h1>
-                <p className="bio">Passionate developer with a love for clean code and innovative solutions.</p>
-            </View>
-            {/* Add an image tag for your picture here */}
+            <div id="first-stage" style={commonStyle}>
+                <h1 style={{ color: "#4285f4" }}>Welcome to Luigi's CV</h1>
+                <p style={{ color: "#555", marginBottom: "30px" }}>
+                    Passionate developer with a love for clean code and innovative solutions.
+                </p>
+                {/* Add an image tag for your picture here */}
+            </div>
 
             {/* Second Stage: Work Experience */}
-            <View id="second-stage">
-                <div className="section">
+            <div id="second-stage" style={commonStyle}>
+                <div style={{ marginTop: "30px" }}>
                     <h2>Work Experience</h2>
                     {/* Add your work experience details here */}
                 </div>
-            </View>
+            </div>
 
             {/* Third Stage: Skills and Certifications */}
-            <View id="third-stage">
-                <div className="section">
+            <div id="third-stage" style={commonStyle}>
+                <div style={{ marginTop: "30px" }}>
                     <h2>Skills</h2>
                     {/* Add your skills here */}
                 </div>
-                <div className="section">
+                <div style={{ marginTop: "30px" }}>
                     <h2>Certifications</h2>
                     {/* Add your certifications here */}
                 </div>
-            </View>
+            </div>
         </ProviderV3>
     );
 };
