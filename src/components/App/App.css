@@ -1,27 +1,21 @@
 body {
     margin: 0;
     font-family: "Arial", sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
 }
 
 .stage {
     padding: 50px;
     text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
 }
 
-#first-stage {
-    background-color: #f0f0f0;
-}
-
-#second-stage {
-    background-color: #e0e0e0;
-}
-
-#third-stage {
-    background-color: #d0d0d0;
-}
-
-h1 {
-    color: #333;
+.app-title {
+    color: #4285f4; /* Google Blue */
 }
 
 .bio {
@@ -29,12 +23,10 @@ h1 {
     margin-bottom: 30px;
 }
 
-.work-experience,
-.skills,
-.certifications {
+.section {
     margin-top: 30px;
 }
 
 h2 {
-    color: #444;
+    color: #333;
 }

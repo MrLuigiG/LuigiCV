@@ -1,33 +1,33 @@
 import React, { FC } from "react";
-import { Grid, lightTheme, Provider as ProviderV3, repeat, View } from "@adobe/react-spectrum";
+import { Provider as ProviderV3, View } from "@adobe/react-spectrum";
 
 import "./App.css";
 
 const App: FC = () => {
     return (
-        <ProviderV3 theme={lightTheme} colorScheme={"light"}>
+        <ProviderV3>
             {/* First Stage: Name and Bio */}
-            <View id="first-stage">
-                <h1 className="App">Welcome to Luigi's CV</h1>
+            <View UNSAFE_className="stage" id="first-stage">
+                <h1 className="app-title">Welcome to Luigi's CV</h1>
                 <p className="bio">Passionate developer with a love for clean code and innovative solutions.</p>
-                {/* Add an image tag for your picture here */}
             </View>
+            {/* Add an image tag for your picture here */}
 
             {/* Second Stage: Work Experience */}
-            <View id="second-stage">
-                <div className="work-experience">
+            <View UNSAFE_className="stage" id="second-stage">
+                <div className="section">
                     <h2>Work Experience</h2>
                     {/* Add your work experience details here */}
                 </div>
             </View>
 
             {/* Third Stage: Skills and Certifications */}
-            <View id="third-stage">
-                <div className="skills">
+            <View UNSAFE_className="stage" id="third-stage">
+                <div className="section">
                     <h2>Skills</h2>
                     {/* Add your skills here */}
                 </div>
-                <div className="certifications">
+                <div className="section">
                     <h2>Certifications</h2>
                     {/* Add your certifications here */}
                 </div>
