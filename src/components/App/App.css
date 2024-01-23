@@ -1,3 +1,42 @@
 .App {
-    text-align: center;
+    body {
+        margin: 0;
+        font-family: "Arial", sans-serif;
+    }
+
+    .stage {
+        padding: 50px;
+        text-align: center;
+    }
+
+    #first-stage {
+        background-color: #f0f0f0;
+    }
+
+    #second-stage {
+        background-color: #e0e0e0;
+    }
+
+    #third-stage {
+        background-color: #d0d0d0;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    .bio {
+        color: #555;
+        margin-bottom: 30px;
+    }
+
+    .work-experience,
+    .skills,
+    .certifications {
+        margin-top: 30px;
+    }
+
+    h2 {
+        color: #444;
+    }
 }
