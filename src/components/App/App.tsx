@@ -9,10 +9,7 @@ const App: FC = () => {
             {/* First Stage: Name and Bio */}
             <View id="first-stage">
                 <h1 className="App">Welcome to Luigi's CV</h1>
-                <p className="bio">
-                    Passionate developer with a love for clean code and innovative solutions. Let's build something
-                    amazing together!
-                </p>
+                <p className="bio">Passionate developer with a love for clean code and innovative solutions.</p>
                 {/* Add an image tag for your picture here */}
             </View>
 
