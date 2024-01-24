@@ -45,7 +45,7 @@
         "@testing-library/user-event": "^12.8.3",
         "@types/jest": "^26.0.24",
         "@types/prettier": "^2.7.2",
-        "@types/react": "^17.0.53",
+        "@types/react": "^17.0.19",
         "@types/react-dom": "^17.0.19",
         "@types/react-router-dom": "^5.3.3",
         "@typescript-eslint/eslint-plugin": "5.54.1",
@@ -60,6 +60,8 @@
         "eslint-plugin-react": "^7.32.2",
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-simple-import-sort": "^10.0.0",
+        "favicons": "^7.1.5",
+        "favicons-webpack-plugin": "^6.0.1",
         "html-webpack-plugin": "^5.5.0",
         "husky": "^8.0.3",
         "identity-obj-proxy": "^3.0.0",
@@ -89,8 +91,9 @@
         "@adobe/react-spectrum": "^3.33.1",
         "@storybook/addon-actions": "^6.5.16",
         "file-loader": "^6.2.0",
-        "react": "^18.2.0",
-        "react-dom": "^17.0.2"
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "sharp": "^0.33.2"
     },
     "config": {
         "commitizen": {
