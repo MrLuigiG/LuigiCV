@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Provider as ProviderV3, lightTheme } from "@adobe/react-spectrum";
+import { Provider, lightTheme } from "@adobe/react-spectrum";
 
 import "./App.css";
 
@@ -14,7 +14,7 @@ const App: FC = () => {
     };
 
     return (
-        <ProviderV3 theme={lightTheme}>
+        <Provider theme={lightTheme}>
             {/* First Stage: Name and Bio */}
             <div id="first-stage" style={commonStyle}>
                 <h1 style={{ color: "#4285f4" }}>Welcome to Luigi's CV</h1>
@@ -43,7 +43,7 @@ const App: FC = () => {
                     {/* Add your certifications here */}
                 </div>
             </div>
-        </ProviderV3>
+        </Provider>
     );
 };
 
