@@ -17,6 +17,9 @@ jobs:
               with:
                   node-version: "21.6.1"
 
+            - name: Configure yarn
+              run: yarn config set ignore-engines true
+
             - name: Install 💻
               run: yarn install
 
