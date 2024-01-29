@@ -11,10 +11,10 @@ const App: FC = () => {
             <Grid
                 areas={["header", "content", "footer"]}
                 columns={["1fr"]}
-                rows={["size-350", "85vh", "size-1000"]}
+                rows={["auto", "85vh", "size-1000"]}
                 gap="size-100"
             >
-                <Grid areas={["spacer heading menu"]} columns={["300px", "1fr", "300px"]} gap={"size-0"}>
+                <Grid areas={["spacer heading menu"]} columns={["300px", "auto", "300px"]} rows="auto" gap={"size-0"}>
                     <View gridArea="heading">
                         <Flex justifyContent="center">
                             <Text
@@ -30,7 +30,15 @@ const App: FC = () => {
                 </Grid>
                 <Grid areas={["content-left content-right"]} columns={["1fr 1fr"]} gridArea="content" gap="size-100">
                     <View backgroundColor="chartreuse-600" gridArea="content-left">
-                        <Image src={img} alt="Loading beautiful face..." />
+                        <Flex
+                            justifyContent="center"
+                            alignItems="center"
+                            height="100%"
+                            marginStart={"2vh"}
+                            marginEnd={"2vh"}
+                        >
+                            <Image src={img} alt="Loading beautiful face..." />
+                        </Flex>
                     </View>
                     <View backgroundColor="chartreuse-600" gridArea="content-right">
                         {/* Content for the right column */}
