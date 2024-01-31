@@ -12,7 +12,7 @@ const App: FC = () => {
                 areas={["header", "content", "footer"]}
                 columns={["1fr"]}
                 rows={["auto", "85vh", "size-1000"]}
-                gap="size-100"
+                gap="size-0"
             >
                 <Grid areas={["spacer heading menu"]} columns={["300px", "auto", "300px"]} rows="auto" gap={"size-0"}>
                     <View gridArea="heading">
