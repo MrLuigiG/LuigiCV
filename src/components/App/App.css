@@ -5,6 +5,13 @@ body {
     color: #333;
 }
 
+.image-frame {
+    border: 2px solid #ccc; /* border style */
+    border-radius: 8px; /* border radius for rounded corners */
+    overflow: hidden; /* hide overflow to prevent content spill */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* shadow effect */
+}
+
 .stage {
     padding: 50px;
     text-align: center;
