@@ -1,4 +1,4 @@
-import React, { FC, useRef } from "react";
+import React, { FC } from "react";
 import {
     Provider,
     defaultTheme,
@@ -16,12 +16,13 @@ import img from "./Headshot.jpeg";
 import ShowMenu from "@spectrum-icons/workflow/ShowMenu";
 
 import "./App.css";
-const headShot = require("./Headshot.jpeg");
 
 const App: FC = () => {
-    const ref = useRef<HTMLDivElement>(null);
-    const handleClick = () => {
-        ref.current?.scrollIntoView({ behavior: "smooth" });
+    const scrollToSection = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
     };
 
     return (
@@ -52,10 +53,21 @@ const App: FC = () => {
                                 </ActionButton>
                                 <Menu
                                     onAction={key => {
-                                        if (key === "About me") {
-                                            handleClick();
-                                        } else {
-                                            alert(key);
+                                        switch (key) {
+                                            case "About me":
+                                                scrollToSection("about-me");
+                                                break;
+                                            case "Experience":
+                                                scrollToSection("experience");
+                                                break;
+                                            case "Education":
+                                                scrollToSection("education");
+                                                break;
+                                            case "Contact me":
+                                                scrollToSection("contact-me");
+                                                break;
+                                            default:
+                                                alert(key);
                                         }
                                     }}
                                 >
@@ -69,7 +81,7 @@ const App: FC = () => {
                     </View>
                 </Grid>
                 <Grid areas={["content-left content-right"]} columns={["1fr 1fr"]} gridArea="about-me">
-                    <View backgroundColor="chartreuse-600" gridArea="content-left">
+                    <View id="about-me" backgroundColor="chartreuse-600" gridArea="content-left">
                         <Flex
                             justifyContent="center"
                             alignItems="center"
@@ -98,16 +110,15 @@ const App: FC = () => {
                     </View>
                 </Grid>
 
-                <View backgroundColor="chartreuse-400" gridArea="experience">
+                <View id="experience" backgroundColor="chartreuse-400" gridArea="experience">
                     {/* Placeholder for experience section */}
-
                     <Text>Experience section</Text>
                 </View>
-                <View backgroundColor="chartreuse-400" gridArea="education">
+                <View id="education" backgroundColor="chartreuse-400" gridArea="education">
                     {/* Placeholder for education section */}
                     <Text>Education section</Text>
                 </View>
-                <View backgroundColor="chartreuse-400" gridArea="contact-me">
+                <View id="contact-me" backgroundColor="chartreuse-400" gridArea="contact-me">
                     {/* Placeholder for contact-me section */}
                     <Text>Contact me section</Text>
                 </View>
